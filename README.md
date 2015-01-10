@@ -2,7 +2,7 @@
 
 *A lab-driven intermediate workshop for creating browser games.*
 
-It's hard to share games with your friends if you have a Game Boy and they're using an iPad but almost everyone has access to a web browser.
+It's hard to share games with your friends if you have a Game Boy and they're using an iPad but almost everyone has access to a web browser. Following this lab either at a Coder Dojo or at home will show you how to analyze and modify 2D games as well as plan and write your own simple 2D games that run in a web browser. It should take about three hours to complete.
 
 ## Outcomes
 
