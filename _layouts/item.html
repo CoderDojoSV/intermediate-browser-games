@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<div class="item">
+
+  <header class="item-header">
+    <h1 class="item-title">{{ page.title }}</h1>
+    <p class="item-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+  </header>
+
+  <article class="item-content">
+    {{ content }}
+  </article>
+
+</div>

@@ -1,0 +1,13 @@
+# Site settings
+title: JavaScript Lab. CoderDojo
+email: steven@nuclearsandwich.com
+baseurl: "/intermediate-browser-games" # the subpath of your site, e.g. /blog/
+url: "http://coderdojosv.github.io" # the base hostname & protocol for your site
+source_repo: "https://github.com/coderdojosv/intermediate-browser-games"
+collections:
+  sections:
+    output: true
+
+
+# Build settings
+markdown: kramdown
