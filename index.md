@@ -36,14 +36,6 @@ It's hard to share games with your friends if you have a Game Boy and they're us
 
 # Sections
 
-<ul class="item-list">
-  {% for section in site.sections %}
-    <li>
-      <span class="item-meta">{{ section.date | date: "%b %-d, %Y" }}</span>
-
-      <h2>
-        <a class="item-link" href="{{ section.url | prepend: site.baseurl }}">{{ section.title }}</a>
-      </h2>
-    </li>
-  {% endfor %}
-</ul>
+{% for section in site.sections %}
+### [{{section.title}}]({{ section.url | prepend: site.baseurl }})
+{% endfor %}
