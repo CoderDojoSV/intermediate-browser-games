@@ -1,11 +1,20 @@
 ---
 layout: page
-title: About
+title: About this lab
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+This course was composed for Silicon Valley Coder Dojo. It would not be possible without
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+* Material and inspiration from the [CoderDojoSF's Build Your Own Adventure](https://github.com/CoderDojoSF/build-your-adventure)
+* The [Enchant.js](http://enchantjs.com) library and documentation
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+And the contributions of
+
+{% for author in site.authors %}
+  * [{{author.name}}](https://github.com/{{author.github}})
+{% endfor %}
+
+# License
+
+Content on this page is licensed under the Creative Commons [CC-BY-SA 4.0 license](http://creativecommons.org/licenses/by-sa/4.0/)
