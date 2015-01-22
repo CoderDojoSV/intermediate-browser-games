@@ -11,8 +11,8 @@ var helpers = {
   },
   randomdirection : function() {
     // like a dice roll. 1 - 3 go right, 4 - 6 go left likewise up and down.k
-    var x = Math.floor(Math.random() * 6) - 3;
-    var y = Math.floor(Math.random() * 6) - 3;
+    var x = Math.floor(Math.random() * 2 + 1) * 3;
+    var y = Math.floor(Math.random() * 2 + 1) * 3;
     return { x : x, y : y };
   },
   nearest : function(from, others) {
@@ -111,14 +111,20 @@ window.onload = function(){
         helpers.nearest(this, runners)
         it.addEventListener("enterframe", function(){
           // Figure out if it tags someone or not
-          if (this.within(this.chasing) && (game.frame - this.chasing.frame_last_tagged) > 100) {
+          if (this.intersect(this.chasing)) {
+            if (this.chasing.frame_last_tagged && game.frame - this.chasing.frame_last_tagged < 100) {
+              return;
+            }
+
             console.log("tag!");
             var newx = this.chasing.x;
             var newy = this.chasing.y;
             this.chasing.x = this.x;
             this.chasing.y = this.y;
+            this.x = newx;
+            this.y = newy;
             this.chasing.frame_last_tagged = game.frame;
-            this.wait_for = 200;
+            this.wait_for = 60;
             return;
           }
 
@@ -130,7 +136,6 @@ window.onload = function(){
 
           if (this.chasing === undefined) {
             this.chasing = helpers.nearest(this, chased);
-            console.log(this.chasing)
             this.chasing_since_frame = this.age;
           }
           if (this.chasing.x > this.x) {
