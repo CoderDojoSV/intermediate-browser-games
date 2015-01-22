@@ -1,0 +1,32 @@
+Tag - a running and tagging game
+================================
+
+This game has one player bear, and some other non-player bears.
+
+Overview
+
+Bears running around, one of the bears is "it" and tries to tag the other
+bears.  The player controls one of the bears and can be tagged and tag other
+bears who all run around.
+
+* At the start of the game
+  * The player bear is created and starts in the middle
+  * The other bears are all created and start around the screen
+  * One other bear is made "it" to start
+
+* Each frame of the game
+  * The running bears run in a direction
+  * The "it" bear chases the nearest bear
+  * The player bear can move around with arrows
+
+* Special events to check for
+  * If a running bear tries to run through a wall they should be stopped
+  * If the "it" bear tries to run through a wall they should be stopped
+  * If the player bear tries to run through a wall they should be stopped
+  * If the "it" bear touches a running bear they switch who is "it"
+  * If the "it" bear touches the player bear the player becomes "it"
+  * If running bears or the player bear run touch they just walk through each other
+
+* At the end of the game
+  * The game never ends
+
