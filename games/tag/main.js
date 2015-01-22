@@ -96,12 +96,11 @@ window.onload = function(){
           game.rootScene.addChild(runners[r]);
         }
 
-        var chased = []
-        var c = 0;
-        for (c = 0; c < runners.length; c++) {
+        var chased = [];
+        for (var c = 0; c < runners.length; c++) {
           chased[c] = runners[c];
         }
-        chased[c + 1] = player;
+        chased.push(player);
 
         var it = new Sprite(32, 32);
         it.image = game.assets["chara1.png"];
@@ -111,6 +110,24 @@ window.onload = function(){
         it.frame = it.character;
         helpers.nearest(this, runners)
         it.addEventListener("enterframe", function(){
+          // Figure out if it tags someone or not
+          if (this.within(this.chasing) && (game.frame - this.chasing.frame_last_tagged) > 100) {
+            console.log("tag!");
+            var newx = this.chasing.x;
+            var newy = this.chasing.y;
+            this.chasing.x = this.x;
+            this.chasing.y = this.y;
+            this.chasing.frame_last_tagged = game.frame;
+            this.wait_for = 200;
+            return;
+          }
+
+          /* Give chase! */
+          if (this.wait_for > 0) {
+            this.wait_for -= 1;
+            return;
+          }
+
           if (this.chasing === undefined) {
             this.chasing = helpers.nearest(this, chased);
             console.log(this.chasing)

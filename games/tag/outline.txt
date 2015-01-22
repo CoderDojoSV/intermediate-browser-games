@@ -24,6 +24,8 @@ bears who all run around.
   * If the "it" bear tries to run through a wall they should be stopped
   * If the player bear tries to run through a wall they should be stopped
   * If the "it" bear touches a running bear they switch who is "it"
+    * The it bear switches places with the tagged bear
+    * The tagged bear can't be tagged for 50 frames
   * If the "it" bear touches the player bear the player becomes "it"
   * If running bears or the player bear run touch they just walk through each other
 
