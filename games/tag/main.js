@@ -96,6 +96,13 @@ window.onload = function(){
           game.rootScene.addChild(runners[r]);
         }
 
+        var chased = []
+        var c = 0;
+        for (c = 0; c < runners.length; c++) {
+          chased[c] = runners[c];
+        }
+        chased[c + 1] = player;
+
         var it = new Sprite(32, 32);
         it.image = game.assets["chara1.png"];
         it.x = helpers.randomx(game.width - it.width);
@@ -104,19 +111,26 @@ window.onload = function(){
         it.frame = it.character;
         helpers.nearest(this, runners)
         it.addEventListener("enterframe", function(){
-          var nearest = helpers.nearest(this, runners)
-          if (nearest.x > this.x) {
+          if (this.chasing === undefined) {
+            this.chasing = helpers.nearest(this, chased);
+            console.log(this.chasing)
+            this.chasing_since_frame = this.age;
+          }
+          if (this.chasing.x > this.x) {
             this.x += 3
-          } else if (nearest.x < this.x) {
+          } else if (this.chasing.x < this.x) {
             this.x -= 3;
           }
 
-          if (nearest.y > this.y) {
+          if (this.chasing.y > this.y) {
             this.y += 3
-          } else if (nearest.y < this.y) {
+          } else if (this.chasing.y < this.y) {
             this.y -= 3;
           }
           this.frame = this.age % 2 + this.character;
+          if (this.age - this.chasing_since_frame > 100) {
+            this.chasing = undefined;
+          }
 
         });
         game.rootScene.addChild(it);
