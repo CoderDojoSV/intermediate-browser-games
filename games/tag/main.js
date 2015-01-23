@@ -9,7 +9,7 @@ window.onload = function(){
     game.scale = 1.5;
     var characters = {
       player_runner: 10,
-      player_chaser: 5,
+      player_chaser: 6,
       player_tagged: 13,
       runner: 0,
       chaser: 5,
