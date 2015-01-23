@@ -28,8 +28,8 @@ It's hard to share games with your friends if you have a Game Boy and they're us
 
 ## Course Outline
 
-* Setup (45 minutes)
-* Introduction (15 minutes)
+* Setup (15 minutes)
+* Introduction (45 minutes)
 * Modify a game (45 minutes)
 * Create a game outline (30 minutes)
 * Implement a new game using the outline (45 minutes)
