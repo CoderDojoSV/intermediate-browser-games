@@ -29,12 +29,17 @@ run once the page finishes loading.
 Once we've set up all the programming for our game we wrap up with
 `game.start();`.
 
+## Object-Oriented Programming
 
-* Object-Oriented Programming
-* Event-driven Programming
-* Procedural Programming
-* Frame-by-frame processing
-* Coordinate grid graphics
-* Collision Detection
-* Sprite sheets
+## Event-driven Programming
+
+## Procedural Programming
+
+## Frame-by-frame processing
+
+## Coordinate grid graphics
+
+## Collision Detection
+
+## Sprite sheets
 
