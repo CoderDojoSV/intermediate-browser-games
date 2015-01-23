@@ -61,6 +61,11 @@ runners are created, then look around to see how they handle frame events.
 Once you've done so, you should be able to keep following the code until
 you've found where their speed is set.
 
+<div class="mentor">
+The `eachframe.runner` function sets the direction using the
+`helper.randomdirection`function.
+</div>
+
 ## Make the runners run away from the chaser
 
 Right now, the running bears besides the player and the chaser just run
@@ -69,6 +74,33 @@ them run in the opposite direction from the chaser.
 
 ***HINT***: The chaser runs *toward* a specific bear at any given time. See if
 you can follow that logic to make the runners run *away* from the chaser.
+
+<div class="mentor">
+In order to do this, they'll need to be able to identify the current chaser (or
+player chaser) from any individual runner. It might be easiest to do this by
+setting `game.chaser` in the chaser's frame handler.
+
+To invert the logic, copy the block of comparisons and where the chaser would
+add a step, subtract a step. So this
+
+~~~
+if (this.chasing.x > this.x) {
+  this.x += 3;
+} else if (this.chasing.x < this.x) {
+  this.x -= 3;
+}
+~~~
+
+becomes
+
+~~~
+if (this.x > chaser.x) {
+  this.x -= 3;
+} else if (this.x < chaser.x) {
+  this.x += 3;
+}
+~~~
+</div>
 
 ### Analyze the result
 
@@ -89,9 +121,10 @@ with, and the code you just wrote, and put them together.
 If we were outlining this code from scratch, we might have an outline entry
 like:
 
-```
-If the chaser is close, run away from the chaser otherwise keep running in the current direction
-```
+~~~
+If the chaser is close, run away from the chaser otherwise keep running in the
+current direction
+~~~
 
 So we know that we'll need to use an `if` statement. But how do we determine
 whether or not two bears are "close", what does "close" mean. Determining

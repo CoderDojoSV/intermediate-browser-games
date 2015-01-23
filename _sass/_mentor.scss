@@ -1,0 +1,13 @@
+.mentor {
+  font-weight: 500;
+  color: #222;
+  border: 1px solid #222;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  display: none;
+}
+
+.mentor:before {
+  content:'MENTORS:';
+}
