@@ -242,3 +242,5 @@ if (runner.was_tagged) {
 
 runner.run();
 ~~~
+
+[Next section]({{site.baseurl}}/02-modify-a-game.html)
