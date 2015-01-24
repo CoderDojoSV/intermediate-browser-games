@@ -9,7 +9,7 @@ In the introduction we went over a bunch of techniques.
 Now we're going to try and *identify* some of those techniques in a game that has already been written.
 
 When reading code, pay attention to comments left by the author.
- These are often helpful in figuring out what the subsequent part of the program does.
+These are often helpful in figuring out what the subsequent part of the program does.
 The best programs have comments that explain *why* something works as well as how.
 
 Open up [the game of tag]({{ site.baseurl}}/games/tag) in a new tab and play
@@ -20,11 +20,10 @@ outline that I wrote when I first thought of making a tag game. We're going to
 practice outlines a little later, so you can take a look at it now if you want,
 but we're going to come back to it later.
 
-There's also two different links to the source code. For now, let's open the
-version marked "annotated source code". Annotated means that I added some
-extra detailed notes in the comments. Look through the annotated source and
-try to find some examples of the following techniques and tell whether they're
-event driven, procedural, object-oriented, or a mix.
+There's also a link to the source code. Let's open the source code and start
+reading it. Look through the source and try to find some examples of the
+following techniques and tell whether they're event driven, procedural,
+object-oriented, or a mix.
 
 * Sending a method
 * An event-handling function
@@ -38,19 +37,21 @@ event driven, procedural, object-oriented, or a mix.
 
 # Grab your own copy of the game
 
-Use the link below to download a copy of the tag game's source code.  
-[Source archive of the game of tag](TODO)
+If you didn't do so during the setup phase, grab a copy of the game at 
 
-If you're using a Chromebook, you can open [the game of tag on 9leap](TODO) and
-fork it.
+Use the link below to download a copy of the tag game's source code.
+
+[Game of tag](https://github.com/CoderDojoSV/intermediate-browser-games/releases/download/2015-01-23-a/tag.zip)
 
 # Make some changes
 
-On line TODO, change the number to something really high like 999. Then make
-it something really small like 4. Experiment with different values to see what
+Open the `main.js` file from the sample game of tag in your text editor.
+
+On line 111, change the number to something high like 25. Then make
+it something small like 1. Experiment with different values to see what
 changing that number does.
 
-Find some other number in the source code and change it to a very large or very
+Find some other number in the source code and change them to a very large or very
 small value. By changing values experimentally, you can not only figure out what
 the number does, but how the changes to that number affect how fun the game is.
 
@@ -64,6 +65,9 @@ you've found where their speed is set.
 <div class="mentor">
 The `eachframe.runner` function sets the direction using the
 `helper.randomdirection`function.
+
+They can make the runners more erratic by using the randominteger helper
+instead of the hard-coded 3.
 </div>
 
 ## Make the runners run away from the chaser

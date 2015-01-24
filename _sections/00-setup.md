@@ -52,3 +52,13 @@ Download it using the link below.
 This will save the template project as a zip file on your computer.
 You can extract it now or wait until we need it.
 
+## Set up a text editor
+
+If you don't already have a preferred text editor, you can get Atom, a text
+editor that is open source and pretty neat. Follow the link below to
+download Atom for your computer.
+
+[Atom text editor](http://atom.io)
+
+We'll use Atom to edit javascript files on our computer while writing our game.
+
