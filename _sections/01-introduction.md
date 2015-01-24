@@ -201,5 +201,44 @@ want to know if objects are "near" rather than touching.
 
 ## Sprite sheets 
 
+A sprite sheet is a bunch of related images you want to use for your game all in
+a single image file. They're used to help organize the amount of work you have
+to do to load files for the game. While sprite sheets can support sprites of
+different sizes, they're easiest to use when every image has the same
+rectangular dimensions.
+
+Preloading a sprite sheet and using it for an on-screen sprite.
+
+~~~
+game.preload("chara1.png");
+runner.image = game.assets["chara1.png"];
+runner.frame = 10;
+~~~
+
 ## Early return
 
+In procedural languages, it's possible to put `return` statements before the
+end of a code block. Doing so will prevent the code that follows from
+running. For this reason, it's usually only done inside a conditional
+statement as an alternative to a large if-else block. Whether or not you use
+if-else or if with an early return is up to you. We use them in the tag game
+when the chaser tags another runner so they don't also run into the runner.
+
+The following statements are equivalent
+
+~~~
+if (runner.was_tagged) {
+  runner.frame_listener = listeners.tagged;
+} else {
+  runner.run();
+}
+~~~
+
+~~~
+if (runner.was_tagged) {
+  runner.frame_listener = listeners.tagged;
+  return;
+}
+
+runner.run();
+~~~

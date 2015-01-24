@@ -1,0 +1,19 @@
+An Enchanting Game
+==================
+
+Overview
+--------
+
+Game Start
+----------
+
+
+Each frame
+----------
+
+Special things to check
+-----------------------
+
+Game end
+--------
+
