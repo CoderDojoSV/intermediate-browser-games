@@ -62,4 +62,4 @@ download Atom for your computer.
 
 We'll use Atom to edit javascript files on our computer while writing our game.
 
-[Next section]({{site.baseurl}}/01-introduction.html)
+[Next section]({{site.baseurl}}/sections/01-introduction.html)

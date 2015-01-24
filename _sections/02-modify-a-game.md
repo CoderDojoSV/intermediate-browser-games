@@ -157,4 +157,4 @@ walk into each other, but I'm pretty confident that you can do it! Find some
 examples of collision detection you've already seen to adapt them to this
 use.
 
-[Next section]({{site.baseurl}}/03-outlining-your-game.html)
+[Next section]({{site.baseurl}}/sections/03-outlining-your-own-game.html)

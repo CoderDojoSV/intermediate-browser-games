@@ -243,4 +243,4 @@ if (runner.was_tagged) {
 runner.run();
 ~~~
 
-[Next section]({{site.baseurl}}/02-modify-a-game.html)
+[Next section]({{site.baseurl}}/sections/02-modify-a-game.html)

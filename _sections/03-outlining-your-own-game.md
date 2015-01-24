@@ -65,4 +65,4 @@ some extra questions and you can add the answers to your outline.
 Once your outline is ready, you can go on to the next section to implement
 your game!
 
-[Next section]({{site.baseurl}}/04-implement-your-game.html)
+[Next section]({{site.baseurl}}/sections/04-implement-your-game.html)
